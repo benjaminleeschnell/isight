@@ -11,8 +11,8 @@ $(document).ready(function() {
 
 
 	/* SYSTEM PARAMETERS /////////////////////////////////////////////// */
-    var radius = 95; 						/* Radius of circels.        */
-    var speed = 1.5;    						/* Speed of circles.         */
+    var radius = 105; 						/* Radius of circels.        */
+    var speed = 3;    						/* Speed of circles.         */
     var textColor = 'rgb(255,255,255)';		/* Color of text in circles. */
     /* ///////////////////////////////////////////////////////////////// */
 
@@ -92,21 +92,21 @@ $(document).ready(function() {
 	circles[0] = new Circle('rgb(204,0,1)', 100, 150, "./grades-k-2.html", "K-2", "80px Arial Black", -95, 33);
     circles[1] = new Circle('rgb(255,204,0)', 315, 150, "./grades-3-5.html", "3-5", "80px Arial Black", -85, 33);
     circles[2] = new Circle('rgb(0,153,0)', 550, 150, "./grades-6-8.html", "6-8", "80px Arial Black", -85, 33);
-    circles[3] = new Circle('rgb(0,102,203)', 755, 150, "./highschool.html", "High School", "20px Verdana", -50, -50);
+    circles[3] = new Circle('rgb(0,102,203)', 755, 150, "./highschool.html", "9-12", "80px Arial Black", -85, 33);
     circles[4] = new Circle('rgb(29,157,168)', 1000, 150, ".#", "?", "80px Arial Black", -30, 33);
 
-    circles[3].draw = function() {
-    	context.beginPath();
-        context.arc(Math.floor(this.R[0]), Math.floor(this.R[1]), this.radius, 0, 2 * Math.PI, false);
-        context.fillStyle = this.color;
-        context.fill();
+    // circles[3].draw = function() {
+    // 	context.beginPath();
+    //     context.arc(Math.floor(this.R[0]), Math.floor(this.R[1]), this.radius, 0, 2 * Math.PI, false);
+    //     context.fillStyle = this.color;
+    //     context.fill();
 
-        context.font = "50px Arial Black";
-        context.fillStyle = textColor;
-        context.fillText("High", this.R[0] - 63, this.R[1] - 20);
-        context.fillText("School", this.R[0] - 95, this.R[1] + 45)
-    }; /* The High School circle needed two lines of text, however, canvas does not support line break so I had 
-    	  to get creative and change the value of .draw() for the high school circle. */
+    //     context.font = "50px Arial Black";
+    //     context.fillStyle = textColor;
+    //     context.fillText("High", this.R[0] - 63, this.R[1] - 20);
+    //     context.fillText("School", this.R[0] - 95, this.R[1] + 45)
+    // }; /* The High School circle needed two lines of text, however, canvas does not support line break so I had 
+    	  //to get creative and change the value of .draw() for the high school circle. */
 
     var wallCheck = function(e) {
 		if(e.R[0] + e.dR[0] <= e.radius || e.R[0] + e.dR[0] >= canvasWidth - e.radius) {
@@ -123,7 +123,7 @@ $(document).ready(function() {
 				/* ...change it's velocity. */
 			}
 		}
-		if(e.R[1] + e.dR[1] <= e.radius || e.R[1] + e.dR[1] >= 400 - e.radius) {
+		if(e.R[1] + e.dR[1] <= e.radius || e.R[1] + e.dR[1] >= 550 - e.radius) {
 			if(Math.abs(200 - (e.R[1] - e.dR[1])) < Math.abs(200 - (e.R[1] + e.dR[1]))) {
 				e.dR[1] = (-1)*e.dR[1];
 			}
@@ -170,7 +170,7 @@ $(document).ready(function() {
     };
 
     var animate = function() {
-        context.clearRect(0,0,canvasWidth,400); /* Clear everything. */
+        context.clearRect(0,0,canvasWidth,550); /* Clear everything. */
         
         for(i = 0; i < circles.length; i++) {
         	circles[i].draw(); /* Draw each circle. */
