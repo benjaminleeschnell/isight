@@ -11,8 +11,8 @@ $(document).ready(function() {
 
 
 	/* SYSTEM PARAMETERS /////////////////////////////////////////////// */
-    var radius = 105; 						/* Radius of circels.        */
-    var speed = 2;    						/* Speed of circles.         */
+    var radius = 90; 						/* Radius of circels.        */
+    var speed = 2.5;    						/* Speed of circles.         */
     var textColor = 'rgb(255,255,255)';		/* Color of text in circles. */
     /* ///////////////////////////////////////////////////////////////// */
 
@@ -89,11 +89,12 @@ $(document).ready(function() {
 	}
 
 	var circles = new Array(); /* An array containing instances of the object class. */
-	circles[0] = new Circle('rgb(204,0,1)', 100, 150, "./grades-k-2.html", "K-2", "80px Arial Black", -95, 33);
-    circles[1] = new Circle('rgb(255,204,0)', 315, 150, "./grades-3-5.html", "3-5", "80px Arial Black", -85, 33);
-    circles[2] = new Circle('rgb(0,153,0)', 550, 150, "./grades-6-8.html", "6-8", "80px Arial Black", -85, 33);
-    circles[3] = new Circle('rgb(0,102,203)', 755, 150, "./highschool.html", "9-12", "80px Arial Black", -85, 33);
-    circles[4] = new Circle('rgb(29,157,168)', 1000, 150, ".#", "?", "80px Arial Black", -30, 33);
+	circles[0] = new Circle('rgb(204,0,1)', 150, 150, "./grades-k-2.html", "K", "80px Arial Black", -30, 33);
+    circles[1] = new Circle('rgb(241, 92, 0)', 400, 150, "./grades-3-5.html", "1", "80px Arial Black", -30, 33);
+    circles[2] = new Circle('rgb(255, 232, 0)', 650, 150, "./grades-6-8.html", "2", "80px Arial Black", -30, 33);
+    circles[3] = new Circle('rgb(0, 153, 0)', 150, 400, "./highschool.html", "3", "80px Arial Black", -30, 33);
+    circles[4] = new Circle('rgb(0, 102, 204)', 550, 400, ".#", "4", "80px Arial Black", -30, 33);
+    circles[5] = new Circle('rgb(125, 0, 204)', 650, 400, ".#", "5", "80px Arial Black", -30, 33);
 
     // circles[3].draw = function() {
     // 	context.beginPath();
@@ -139,14 +140,14 @@ $(document).ready(function() {
 			if(c1.recCol[j]) {
 	
 			} else {
-	            /*var dot1 = (-2) * vMath.dot(c1.R, diffUnit);
+	            var dot1 = (-2) * vMath.dot(c1.R, diffUnit);
 	            var dot2 = (-2) * vMath.dot(c2.R, vMath.scale((-1), diffUnit));
 
 	            var new_dR_1 = vMath.add(c1.dR, vMath.scale(dot1, diffUnit));
 				var new_dR_2 = vMath.add(c2.dR, vMath.scale(dot2, vMath.scale((-1), diffUnit)));
 
 				var new_R_1 = vMath.add(new_dR_1, c1.R); 
-				var new_R_2 = vMath.add(new_dR_2, c2.R);*/
+				var new_R_2 = vMath.add(new_dR_2, c2.R);
 
 				var dot1 = vMath.dot(vMath.scale(-1,diffUnit),c1.dR);
 				var dot2 = vMath.dot(diffUnit,c2.dR);
