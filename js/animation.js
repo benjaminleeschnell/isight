@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 	/* SYSTEM PARAMETERS /////////////////////////////////////////////// */
     var radius = 90; 						/* Radius of circels.        */
-    var speed = 2.5;    						/* Speed of circles.         */
+    var speed = 2;    						/* Speed of circles.         */
     var textColor = 'rgb(255,255,255)';		/* Color of text in circles. */
     /* ///////////////////////////////////////////////////////////////// */
 
