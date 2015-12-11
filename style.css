@@ -3,6 +3,10 @@
 /*      Built with Blocs
 /*-----------------------------------------------------------------------------------*/
 
+#source {
+	width: 90px;
+}
+
 body{
 	margin:0;
 	padding:0;
@@ -233,7 +237,42 @@ button{outline: none!important;} /* Prevent ugly blue glow on chrome and safari 
 	float:left;
 	margin-top:4px;
 	font-size:16px;
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+	text-align: center;
 }
+
+.nav > li:nth-of-type(1) {
+    background: #CC0001;
+}
+
+.nav > li:nth-of-type(2) {
+    background: #F15C00;
+}
+
+.nav > li:nth-of-type(3) {
+    background: #FFE800;
+}
+
+.nav > li:nth-of-type(4) {
+    background: #009900;
+}
+
+.nav > li:nth-of-type(5) {
+    background: #58D6E2;
+}
+
+.nav > li:nth-of-type(6) {
+    background: #0066CC;
+}
+
+.nav > li:nth-of-type(7) img{
+   width: 50px;
+   margin: -16px 0 0 -16px;
+ }
+
+
 .navbar-nav .open .dropdown-menu > li > a{
 	text-align: inherit;
 }
