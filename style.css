@@ -7,6 +7,11 @@
 	width: 90px;
 }
 
+canvas {
+	background: url('img/bg-bw.png') center center no-repeat;
+	background-size: cover;
+}
+
 body{
 	margin:0;
 	padding:0;
