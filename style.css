@@ -248,6 +248,10 @@ button{outline: none!important;} /* Prevent ugly blue glow on chrome and safari 
 	text-align: center;
 }
 
+.nav a {
+	color: white;
+}
+
 .nav > li:nth-of-type(1) {
     background: #CC0001;
 }
@@ -501,7 +505,7 @@ iframe{
         background:rgba(0,0,0,.8);
     }
     #hero-bloc .navbar .nav a{
-        color:rgba(255,255,255,.6);
+        color: rgba(255,255,255,.6);
     }
     .hero{
         padding:50px 0;
