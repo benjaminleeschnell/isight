@@ -6,9 +6,9 @@ $(document).ready(function() {
     var elemTop = canvas.offset().top;
     /* Accesses the canvas element.*/
 
-	var image = document.getElementById("source");
+	
 
-	context.drawImage(image, elemLeft, elemTop, 200, 200);
+	//context.drawImage('../img/question.png', elemLeft, elemTop, 200, 200);
 
 
     /* elemLeft and elemTop are used to adjust the (x, y)
@@ -19,6 +19,7 @@ $(document).ready(function() {
     var radius = 90; 						/* Radius of circels.        */
     var speed = 2;    						/* Speed of circles.         */
     var textColor = 'rgb(255,255,255)';		/* Color of text in circles. */
+    var image = document.getElementById("source");
     /* ///////////////////////////////////////////////////////////////// */
 
 
@@ -94,26 +95,26 @@ $(document).ready(function() {
 	}
 
 	var circles = new Array(); /* An array containing instances of the object class. */
-	circles[0] = new Circle('rgb(204,0,1)', 150, 150, "./#", "K", "80px Arial Black", -33, 30);
-    circles[1] = new Circle('rgb(241, 92, 0)', 400, 150, "./#", "1", "80px Arial Black", -30, 30);
-    circles[2] = new Circle('rgb(255, 232, 0)', 650, 150, "./#", "2", "80px Arial Black", -30, 30);
-    circles[3] = new Circle('rgb(0, 153, 0)', 150, 400, "./#", "3", "80px Arial Black", -30, 30);
-    circles[4] = new Circle('rgb(88, 214, 226)', 350, 400, ".#", "4", "80px Arial Black", -30, 30);
-    circles[5] = new Circle('rgb(0, 102, 204)', 550, 400, ".#", "5", "80px Arial Black", -30, 30);
-    //circles[6] = new Circle('rgb(125, 0, 204)', 750, 400, ".#", "?", "80px Arial Black", -30, 33);
+	circles[0] = new Circle('rgb(204,0,1)', 150, 150, "./k.html", "K", "80px Arial Black", -33, 30);
+    circles[1] = new Circle('rgb(241, 92, 0)', 400, 150, "./grade-1.html", "1", "80px Arial Black", -30, 30);
+    circles[2] = new Circle('rgb(255, 232, 0)', 650, 150, "./grade-2.html", "2", "80px Arial Black", -30, 30);
+    circles[3] = new Circle('rgb(0, 153, 0)', 150, 400, "./grade-3.html", "3", "80px Arial Black", -30, 30);
+    circles[4] = new Circle('rgb(88, 214, 226)', 350, 400, "./grade-4.html", "4", "80px Arial Black", -30, 30);
+    circles[5] = new Circle('rgb(0, 102, 204)', 550, 400, "./grade-5.html", "5", "80px Arial Black", -30, 30);
+    circles[6] = new Circle('rgb(125, 0, 204)', 750, 400, "./#", "?", "80px Arial Black", -30, 33);
 
 
-    // circles[6].draw = function() {
-    //  	context.beginPath();
-    //      context.arc(Math.floor(this.R[0]), Math.floor(this.R[1]), this.radius, 0, 2 * Math.PI, false);
-    //      context.fillStyle = this.color;
-    //      context.fill();
+     circles[6].draw = function() {
+      	context.beginPath();
+        context.arc(Math.floor(this.R[0]), Math.floor(this.R[1]), this.radius, 0, 2 * Math.PI, false);
+        context.fillStyle = this.color;
+        context.fill();
 
     //      context.font = "50px Arial Black";
     //      context.fillStyle = textColor;
-    //      context.drawImage(image);
+          context.drawImage(image, this.R[0] -90, this.R[1] -90, this.radius + 90, this.radius + 90);
     //     context.fillText("School", this.R[0] - 95, this.R[1] + 45)
-    //}; /* The High School circle needed two lines of text, however, canvas does not support line break so I had 
+    }; /* The High School circle needed two lines of text, however, canvas does not support line break so I had 
     	  //to get creative and change the value of .draw() for the high school circle. */
 
 
