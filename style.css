@@ -7,10 +7,10 @@
 	width: 90px;
 }
 
-canvas {
+/*canvas {
 	background: url('img/bg-bw.png') center center no-repeat;
 	background-size: cover;
-}
+}*/
 
 body{
 	margin:0;
@@ -151,6 +151,17 @@ button{outline: none!important;} /* Prevent ugly blue glow on chrome and safari 
 	border-color:rgba(0,0,0,.3);
 }
 
+/* background images */
+
+#nav-bloc {
+	background: url('img/bg-bw.png') center center no-repeat;
+	background-size: cover;
+}
+
+#bloc-7 {
+	background: url('img/bg-bw.png') center center no-repeat;
+	background-size: cover;
+}
 
 /* Light theme */
 
@@ -276,7 +287,7 @@ button{outline: none!important;} /* Prevent ugly blue glow on chrome and safari 
     background: #0066CC;
 }
 
-.nav > li:nth-of-type(7) img{
+.nav img {
    width: 50px;
    margin: -16px 0 0 -16px;
  }
